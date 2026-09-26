@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prize Drop // Neon Arcade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Prize Drop home">
+        <span class="brand-mark">✦</span>
+        <span>PRIZE<span class="pink">DROP</span></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a class="active" href="#games">Games</a>
+        <a href="#collection">My collection <span class="count" id="navCount">0</span></a>
+      </nav>
+      <div class="balance" aria-label="Current balance">
+        <span class="coin">◎</span><span id="balance">$5.00</span><button class="top-up" id="topUp" type="button">+ $10</button>
+      </div>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> LIVE ARCADE // MACHINE 01</p>
+        <h1>Grab it.<br /><span>Keep it.</span></h1>
+        <p class="hero-text">Drop a claw, chase a prize, and build your shelf of shiny wins. Every play is a new shot at something legendary.</p>
+        <a class="cta" href="#games">PLAY FOR KEEPS <span>↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="pixel-star star-one">✦</div><div class="pixel-star star-two">✧</div>
+        <div class="prize-burst">PRIZE<br /><strong>ZONE</strong></div>
+        <div class="hero-ticket"><span>WIN<br />BIG</span><b>✦</b></div>
+      </div>
+    </section>
+
+    <section class="game-section" id="games">
+      <div class="section-heading"><div><p class="eyebrow">01 // CHOOSE YOUR FIGHT</p><h2>Pick a machine.</h2></div><p class="muted">Three rooms. One collection.<br />What will you catch?</p></div>
+      <div class="game-grid">
+        <article class="game-card featured">
+          <div class="card-top"><span class="tag hot">HOT RIGHT NOW</span><span class="players">● 2.4K PLAYING</span></div>
+          <div class="machine-scene"><div class="machine-glow"></div><div class="claw"><i></i><i></i><i></i></div><div class="toy toy-bear">◕ᴥ◕</div><div class="toy toy-ball">✦</div><div class="toy toy-pink">♥</div><div class="machine-floor"></div></div>
+          <div class="card-info"><div><h3>Cosmic Claw</h3><p>Rare finds from the outer shelf</p></div><button class="play-btn" data-game="Cosmic Claw" data-cost="1.5">PLAY $1.50 <span>→</span></button></div>
+        </article>
+        <article class="game-card small-card">
+          <div class="card-top"><span class="tag purple">NEW DROP</span><span class="players">● 891 PLAYING</span></div>
+          <div class="mini-scene candy"><div class="mini-capsule">★</div><div class="mini-capsule pink-cap">♥</div><div class="mini-capsule blue-cap">◆</div></div>
+          <div class="card-info"><div><h3>Candy Capsule</h3><p>Sweet little surprises</p></div><button class="play-btn" data-game="Candy Capsule" data-cost="1">PLAY $1 <span>→</span></button></div>
+        </article>
+        <article class="game-card small-card locked-card">
+          <div class="card-top"><span class="tag yellow">COMING SOON</span><span class="players">✦ NEXT UP</span></div>
+          <div class="mini-scene gold"><div class="gold-prize">?</div><div class="gold-prize mini">✦</div><div class="gold-prize">$</div></div>
+          <div class="card-info"><div><h3>Golden Hour</h3><p>The jackpot shelf</p></div><button class="play-btn disabled" disabled>SOON <span>→</span></button></div>
+        </article>
+        <article class="game-card small-card">
+          <div class="card-top"><span class="tag pink-tag">LIMITED EDITION</span><span class="players">● 1.1K PLAYING</span></div>
+          <div class="mini-scene plush"><div class="plush-prize">☻</div><div class="plush-prize purple-plush">★</div><div class="plush-prize">♥</div></div>
+          <div class="card-info"><div><h3>Plush Planet</h3><p>Soft landings, big personality</p></div><button class="play-btn" data-game="Plush Planet" data-cost="1.25">PLAY $1.25 <span>→</span></button></div>
+        </article>
+        <article class="game-card small-card">
+          <div class="card-top"><span class="tag blue-tag">SKILL MODE</span><span class="players">● 674 PLAYING</span></div>
+          <div class="mini-scene tech"><div class="tech-prize">◆</div><div class="tech-prize blue-tech">⌁</div><div class="tech-prize">✚</div></div>
+          <div class="card-info"><div><h3>Pixel Vault</h3><p>Retro loot with extra sparkle</p></div><button class="play-btn" data-game="Pixel Vault" data-cost="2">PLAY $2 <span>→</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="collection" id="collection">
+      <div class="collection-title"><p class="eyebrow">02 // YOUR HAUL</p><h2>Fresh catches <span id="collectionCount">(0)</span></h2></div>
+      <div class="collection-items" id="collectionItems"><div class="empty-state">Your shelf is waiting.<br /><span>Play a machine to catch your first prize.</span></div></div>
+    </section>
+
+    <footer><span>PRIZE<span class="pink">DROP</span> © 2024</span><span>PLAY FAIR. PLAY BRIGHT. <b>✦</b></span></footer>
+  </main>
+  <div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close" id="closeModal" aria-label="Close">×</button><p class="eyebrow">CLAW LOCKED ON</p><h2 id="modalTitle">Ready to drop?</h2><p id="modalCopy">One play, one chance, one shiny new thing for your shelf.</p><button class="cta modal-cta" id="confirmPlay">DROP THE CLAW <span>↘</span></button><p class="fine-print">You’ll spend <strong id="modalCost">$1.50</strong> from your balance.</p></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
